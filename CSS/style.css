@@ -1,35 +1,41 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    color: white;
+  width: 100%;
+  font-family: sans-serif;
+  color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .container {
-    max-width: 1130px;
-    margin: 0 auto;
+  max-width: 1130px;
+  margin: 0 auto;
 }
 
 .header {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1790px;
-    top: 28px;
-    left: 56px;
-}
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.75rem 3rem;
 
-.header a {
+  .logo {
+    width: 167px;
+    height: 45px;
+  }
+
+  a {
     display: inline-block;
     background: #e50914;
     color: white;
@@ -38,230 +44,302 @@ img {
     padding: 8px 18px;
     text-decoration: none;
     border-radius: 3px;
-}
 
-.header a:hover {
-    background: #c90711;
-    transition: 200ms linear;
-}
+    &:hover {
+      background: #c90711;
+      transition: 200ms linear;
+    }
+  }
 
-.img {
-    width: 167px;
-    height: 45px;
 }
 
 .main {
-    height: 730px;
-    background: url("../img/bg.jpg");
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+  height: 730px;
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
 .main-child {
-    z-index: 1;
-    display: grid;
-    justify-items: center;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
 }
 
 .main h1 {
-    font-size: 64px;
-    max-width: 670px;
-    text-align: center;
+  font-size: 64px;
+  max-width: 670px;
+  text-align: center;
 }
 
 .main span {
-    font-size: 26px;
-    margin: 16px;
+  font-size: 26px;
+  margin: 16px;
 }
 
 .form-cta {
-    display: grid;
-    grid-template-columns: 500px 200px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 500px 200px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 input {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 .form-cta input {
-    padding: 0 10px;
-    font-size: 18px;
-    font-family: sans-serif;
-    border-radius: 4px 0 0 4px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-family: sans-serif;
+  border-radius: 4px 0 0 4px;
 }
 
 .form-cta button {
-    background: #e50914;
-    outline: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    padding: 20px 15px;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
+  background: #e50914;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 20px 15px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
 }
 
 .form-cta button::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 20px;
-    background: url("../img/seta.svg");
-    margin-left: 20px;
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background: url("../img/seta.svg");
+  margin-left: 20px;
 }
 
 .form-cta button:hover {
-    background: #c90711;
-    transition: 200ms linear;
+  background: #c90711;
+  transition: 200ms linear;
 }
 
 .main p {
-    max-width: none;
-    margin-top: 16px;
-    font-size: 19.2px;
+  max-width: none;
+  margin-top: 16px;
+  font-size: 19.2px;
 }
 
 .gradient {
-    background: rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(
-        to top,
-        rgba(0,0,0,.8) 0,
-        rgba(0,0,0,0) 60%,
-        rgba(0,0,0,.8) 100%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, .8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, .8) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .section {
-    background: black;
-    padding: 30px 0;
-    border-top: 8px solid #222;
+  background: black;
+  padding: 30px 0;
+  border-top: 8px solid #222;
 }
 
 .section h1 {
-    font-size: 50px;
-    margin-bottom: 16px;
+  font-size: 50px;
+  margin-bottom: 16px;
 }
 
 .section p {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
 }
 
 .img-tv {
-    position: relative;
+  position: relative;
 }
 
 .img-tv img {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .video-tv {
-    position: absolute;
-    width: 400px;
-    top: 80px;
-    left: 70px;
+  position: absolute;
+  width: 400px;
+  top: 80px;
+  left: 70px;
 }
 
-.download .grid > div:first-child {
-    order: 2
+.download .grid>div:first-child {
+  order: 2
 }
 
 .download .img-tv {
-    order: 1;
+  order: 1;
 }
 
 .device-pile .video-tv {
-    width: 340px;
-    top: 44px;
-    left: 100px;
+  width: 340px;
+  top: 44px;
+  left: 100px;
 }
 
 ul {
-    padding: 0;
-    display: block;
-    list-style-type: disc;
-    margin-block-end: 16px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+  padding: 0;
+  display: block;
+  list-style-type: disc;
+  margin-block-end: 16px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
 .faq-card h1 {
-    font-size: 50px;
-    text-align: center;
-    line-height: 1.1;
-    margin-bottom: 8px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
 .faq-card .faq-list {
-    width: 75%;
-    margin: 32px auto;
-    max-width: 815px;
+  width: 75%;
+  margin: 32px auto;
+  max-width: 815px;
 }
 
 .faq-list {
-    width: 90%;
-    margin: 24px auto;
+  width: 90%;
+  margin: 24px auto;
 }
 
 .faq-list-item {
-    list-style-type: none;
-    margin-bottom: 10px;
+  list-style-type: none;
+  margin-bottom: 10px;
 }
 
 .faq-question {
-    font-size: 26px;
-    color: white;
-    padding: 20px 34px;
-    font-weight: 400;
-    position: relative;
-    width: 100%;
-    border-radius: 4px;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    background: #303030;
-    cursor: pointer;
+  font-size: 26px;
+  color: white;
+  padding: 20px 34px;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background: #303030;
+  cursor: pointer;
 }
 
 .final {
-    background: black;
-    padding: 64px 0;
-    border-bottom: 8px solid #222;
-    display: grid;
-    justify-items: center;
+  background: black;
+  padding: 64px 0;
+  border-bottom: 8px solid #222;
+  display: grid;
+  justify-items: center;
 }
 
 .final p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .footer {
-    background: black;
-    text-align: center;
-    padding: 30px;
+  background: black;
+  text-align: center;
+  padding: 30px;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1rem;
+
+    .logo {
+      width: 100px;
+    }
+  }
+
+  .main {
+    padding: 1rem;
+
+    .main-child {
+      width: 100%;
+      
+      h1 {
+        font-size: 2.5rem;
+        max-width: unset;
+      }
+
+      span {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .form-cta {
+        width: 100%;
+        grid-template-columns: 1fr auto;
+
+        input {
+          font-size: 1rem;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          white-space: nowrap;
+
+          &::after {
+            margin-left: 8px;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+
+    .container {
+      .grid {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
 }
