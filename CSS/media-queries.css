@@ -1,0 +1,130 @@
+@media (max-width: 1200px) {
+  body {
+    .section {
+      .container {
+        .grid {
+          grid-template-columns: 1fr;
+          padding: 0 1rem;
+
+          .img-tv {
+            .video-tv {
+              top: calc(100% - 80%);
+              left: 12%;
+              width: calc(100% - 20%);
+              height: calc(100% - 42%);
+
+              &.video-2 {
+                top: 2.5%;
+                left: 17%;
+                width: calc(100% - 36%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .header {
+      padding: 1.5rem 1rem;
+
+      .logo {
+        width: 100px;
+      }
+    }
+
+    .form-cta {
+      width: 100%;
+      grid-template-columns: 1fr auto;
+
+      input {
+        font-size: 1rem;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+    }
+
+    .main {
+      padding: 1rem;
+
+      .main-child {
+        width: 100%;
+
+        h1 {
+          font-size: 2.5rem;
+          max-width: unset;
+        }
+
+        span {
+          font-size: 1.25rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .section {
+      padding: 1.5rem 1rem;
+
+      .container {
+        .grid {
+          overflow: hidden;
+
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            font-size: 1.25rem;
+          }
+
+          .img-tv {
+            .video-tv {
+              top: calc(100% - 81%);
+              left: calc(100% - 87%);
+              width: calc(100% - 25%);
+
+              &.video-2 {
+                left: calc(100% - 82%);
+                width: calc(100% - 36%);
+              }
+            }
+          }
+        }
+
+        .faq-card {
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          .faq-list {
+            .faq-list-item {
+              .faq-question {
+                font-size: 1rem;
+                padding: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .final {
+      padding: 4rem 1rem;
+    }
+
+    .footer {
+      padding: 1rem;
+    }
+  }
+}
