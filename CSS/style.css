@@ -52,18 +52,22 @@ body {
   }
 
   .form-cta {
-    display: grid;
-    grid-template-columns: 500px 200px;
+    display: flex;
+    width: 100%;
+    max-width: 700px;
     margin: 1.25rem 0 .75rem 0;
 
     input {
+      width: 100%;
       padding: 0 .75rem;
       font-size: 1.125rem;
       font-family: sans-serif;
-      border-radius: .25rem 0 0 .25rem;
+      border-radius: .5rem 0 0 .5rem;
     }
 
     button {
+      display: flex;
+      align-items: center;
       background: #e50914;
       outline: none;
       border: none;
@@ -72,6 +76,8 @@ body {
       padding: 1.25rem 1rem;
       cursor: pointer;
       border-radius: 0 .5rem .5rem 0;
+      max-width: 200px;
+      white-space: nowrap;
 
       &::after {
         content: "";
@@ -92,7 +98,7 @@ body {
   }
 
   .main {
-    height: 728px;
+    height: 100vh;
     background: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,7 +147,7 @@ body {
 
   .section {
     background: black;
-    padding: 30px 0;
+    padding: 5rem 0;
     border-top: 8px solid #222;
 
     &.download {
@@ -224,7 +230,9 @@ body {
         }
 
         .faq-list {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          gap: .75rem;
           width: 100%;
           margin: 32px auto;
           padding: 0;
@@ -236,17 +244,16 @@ body {
 
           .faq-list-item {
             list-style-type: none;
-            margin-bottom: 10px;
             display: list-item;
 
             .faq-question {
-              font-size: 26px;
+              font-size: 1.5rem;
               color: white;
-              padding: 20px 34px;
+              padding: 1.5rem;
               font-weight: 400;
               position: relative;
               width: 100%;
-              border-radius: 4px;
+              border-radius: .5rem;
               border: 0;
               display: flex;
               align-items: center;

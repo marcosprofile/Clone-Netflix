@@ -1,10 +1,14 @@
 @media (max-width: 1200px) {
   body {
+    .main {
+      padding: 0 1.5rem;
+    }
     .section {
+      padding: 2.5rem 1.5rem;
+
       .container {
         .grid {
           grid-template-columns: 1fr;
-          padding: 0 1rem;
 
           .img-tv {
             .video-tv {
@@ -22,6 +26,10 @@
           }
         }
       }
+    }
+
+    .final {
+      padding: 2.5rem 1.5rem;
     }
   }
 }
@@ -45,16 +53,11 @@
       }
 
       button {
-        display: flex;
-        align-items: center;
         font-size: 1rem;
-        white-space: nowrap;
       }
     }
 
     .main {
-      padding: 1rem;
-
       .main-child {
         width: 100%;
 
@@ -74,8 +77,6 @@
     }
 
     .section {
-      padding: 1.5rem 1rem;
-
       .container {
         .grid {
           overflow: hidden;
@@ -110,17 +111,13 @@
           .faq-list {
             .faq-list-item {
               .faq-question {
-                font-size: 1rem;
+                font-size: 1.25rem;
                 padding: 1rem;
               }
             }
           }
         }
       }
-    }
-
-    .final {
-      padding: 4rem 1rem;
     }
 
     .footer {
